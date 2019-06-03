@@ -64,12 +64,20 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
-
+body {
+    margin: 0 auto;
+    width: 90%;
+}
 
 @media (max-width:800px) {
     body {
-        margin: 0 auto;
         width: 85%;
+    }
+}
+
+@media (max-width:500px) {
+    body {
+        width: 75%;
     }
 }
 
@@ -82,10 +90,10 @@ h1, h2, h3, h4, h5 {
 	/* background: #81a0ab; */
 	width: 100%;
 	padding: 16px 12px;
-	position: fixed;
-	top: 0;
+	/* position: fixed; */
+	/* top: 0; */
 	align-items: center;
-	z-index: 100;
+	/* z-index: 100; */
 }
 
 .nav-links {
@@ -96,24 +104,37 @@ h1, h2, h3, h4, h5 {
 
 .nav-link {
 	text-decoration: none;
-	color: black;
+	color: #9e9e9e;
 	font-size: 18px;
 	transition: color 300ms ease-out;
 }
 
 .nav-link:hover {
-	color: #566877;
+	color: #000000;
 }
 
 @media (max-width: 800px) {
     .navbar {
         flex-direction: column;
-        position: relative;
     }
 
     .nav-links {
         width: 100%;
         order: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding-bottom: 16px;
+        margin: 8px auto;
+        border-bottom: 1px solid #9e9e9e;
     }
 }
 
@@ -129,7 +150,19 @@ h1, h2, h3, h4, h5 {
         order: 1;
         margin: 0 auto;
         padding-top: 16px;
-        padding-bottom: 24px;
+        padding-bottom: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 1;
+        margin: 8px auto;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #9e9e9e;
     }
 }
 
@@ -138,7 +171,7 @@ h1, h2, h3, h4, h5 {
 	height: 450px;
 	display: flex;
 	justify-content: center;
-	margin-top: 64px;
+	/* margin-top: 64px; */
 	padding: 32px 0;
 }
 
@@ -183,12 +216,31 @@ h1, h2, h3, h4, h5 {
 @media (max-width: 800px) {
 
     .cta {
+        height: 375px;
         align-items: center;
-        margin-top: 0;
     }
 
     .cta-image-container {
         display: none;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .cta {
+        height: auto;
+        padding: 24px;
+        padding-bottom: 48px;
+    }
+
+    .cta-text {
+        width: 100%;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 5px 0;
+        width: 45%;
     }
 }
 
@@ -202,23 +254,29 @@ main {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	padding: 16px 32px;
+	padding: 16px 0;
 	margin: 24px auto;
 }
 
 .main-section {
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .main-section-half {
-	width: 45%;
+	width: 48%;
 	text-align: left;
 }
 
 .middle-image-container {
-	margin: 32px 0;
+    margin: 32px 0;
+    width: 100%;
+}
+
+.middle-img {
+    width: 100%;
+    height: 200px;
 }
 
 .main-section-third {
@@ -231,22 +289,53 @@ main {
 }
 
 @media (max-width: 800px) {
+
     .middle-image-container {
-        width: 100%;
         margin: 48px auto;
     }
 
     .middle-img {
-        width: 100%;
+        height: 150px;
     }
 }
+
+@media (max-width: 500px) {
+    
+    main {
+        margin: 0 auto;
+    }
+    .main-section {
+        flex-direction: column;
+    }
+    
+    .main-section-half {
+        width: 100%;
+        align-items: center;
+        margin: 24px 0;
+    }
+
+    .middle-image-container {
+        margin: 24px auto;
+    }
+
+    .middle-img {
+        height: 100px;
+    }
+    
+    .main-section-third {
+        width: 100%;
+        align-items: center;
+        margin: 24px 0;
+    }
+}
+
 
 /****************** START CONTACT **************/
 
 .contact {
-	width: 90%;
-	margin: 32px auto;
-	margin-left: 125px;
+	width: 100%;
+    margin: 32px auto;
+    margin-left: 0;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -254,18 +343,6 @@ main {
 	margin: 24px 0;
 }
 
-@media (max-width: 800px) {
-    .contact {
-        width: 100%;
-        margin: 32px auto;
-        margin-left: 0;
-        padding: 0 32px;
-    }
-
-    .contact-info {
-        margin: 16px 0;
-    }
-}
 
 /****************** END CONTACT **************/
 
@@ -276,8 +353,7 @@ main {
 /****************** START FOOTER **************/
 
 footer {
-	width: 90%;
-	margin: 0 auto;
+	width: 100%;
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	height: 85px;
@@ -290,7 +366,7 @@ footer {
 
 hr {
 	border: 1px solid black;
-	width: 90%;
+	width: 100%;
 }
 
 
