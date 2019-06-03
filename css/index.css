@@ -65,13 +65,21 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
+
+@media (max-width:800px) {
+    body {
+        margin: 0 auto;
+        width: 85%;
+    }
+}
+
 /****************** START HEADER **************/
 
 
 /****************** NAVIGATION **************/
 .navbar {
 	display:flex;
-	background: #81a0ab;
+	/* background: #81a0ab; */
 	width: 100%;
 	padding: 16px 12px;
 	position: fixed;
@@ -88,7 +96,7 @@ h1, h2, h3, h4, h5 {
 
 .nav-link {
 	text-decoration: none;
-	color: #f1f7f7;
+	color: black;
 	font-size: 18px;
 	transition: color 300ms ease-out;
 }
@@ -97,11 +105,32 @@ h1, h2, h3, h4, h5 {
 	color: #566877;
 }
 
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .nav-links {
+        width: 100%;
+        order: 2;
+    }
+}
+
 /****************** LOGO **************/
 
 .logo-container {
 	margin-left: auto;
 	margin-right: 24px;
+}
+
+@media (max-width: 800px) {
+    .logo-container {
+        order: 1;
+        margin: 0 auto;
+        padding-top: 16px;
+        padding-bottom: 24px;
+    }
 }
 
 /****************** CALL TO ACTION **************/
@@ -151,19 +180,30 @@ h1, h2, h3, h4, h5 {
 	align-items: center;
 }
 
+@media (max-width: 800px) {
+
+    .cta {
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .cta-image-container {
+        display: none;
+    }
+}
+
 /****************** END HEADER **************/
 
 
 /****************** START MAIN **************/
 
 main {
-	height: 75%;
-	width: 90%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	padding: 16px 32px;
-	margin: 0 auto;
+	margin: 24px auto;
 }
 
 .main-section {
@@ -190,6 +230,17 @@ main {
 	font-size: 20px;
 }
 
+@media (max-width: 800px) {
+    .middle-image-container {
+        width: 100%;
+        margin: 48px auto;
+    }
+
+    .middle-img {
+        width: 100%;
+    }
+}
+
 /****************** START CONTACT **************/
 
 .contact {
@@ -201,6 +252,19 @@ main {
 
 .contact-info {
 	margin: 24px 0;
+}
+
+@media (max-width: 800px) {
+    .contact {
+        width: 100%;
+        margin: 32px auto;
+        margin-left: 0;
+        padding: 0 32px;
+    }
+
+    .contact-info {
+        margin: 16px 0;
+    }
 }
 
 /****************** END CONTACT **************/
